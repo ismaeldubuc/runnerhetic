@@ -140,8 +140,8 @@ function edition(){
 }
 //Fonction qui supprime les deux boutons
 function suppTwoButtons(){
-    let first = document.getElementById("buttonPlus")
-    let second = document.getElementById("buttonMoins")
+    let first = document.getElementById("firstButton")
+    let second = document.getElementById("supprimer")
     first.remove()
     second.remove()
 }
@@ -149,7 +149,6 @@ function suppTwoButtons(){
 function allButtons(){
     suppTwoButtons()
     newObstacle()
-    newButtons()
 }
 // Fonction qui convertis tabSave en format Json
 function convertToJSON() {
@@ -196,7 +195,8 @@ function importFile(file) {
       console.log(data);
       // Renvoie de data
       Affichage()
-      
+      suppTwoButtons()
+      alert("Retournez au menu et lancer une partie")
       return data
       // console.log(Object.values(data))
     }

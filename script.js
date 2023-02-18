@@ -1,3 +1,4 @@
+alert("Appuyez sur a pour sauter et sur q pour vous accroupir, vous ne pouvez pas sauter par dessus les oiseaux")
 var perso = document.querySelector("#personnage");
 
 var obstacles = document.querySelector("#obstacles");
@@ -34,7 +35,7 @@ function detectionCollision(){
 
     if(obstaclesLeft<20 && obstaclesLeft >0 && (persoBottom< 114 && typeObstacle!=1 || (persoBottom>=50 && typeObstacle==1)) ){
 
-        afficherGameOver();
+        afficherResultatDuJeu();
 
     } else if ((obstaclesLeft  < 0) && (dejaPasseParLa==false)) { // si l'obstacle n'est pas entré en collision avec le personnage
         obstacleArray[typeObstacle].style.display = "none"; // on cache l'obstacle
@@ -50,8 +51,8 @@ function detectionCollision(){
     
     
 }
-function afficherGameOver() {
-    var titleOver = "Game Over";
+function afficherResultatDuJeu(titre = "Game Over") {
+    var titleOver = titre;
 
     document.querySelector("#titreOver").innerText = titleOver;   
     document.querySelector("#score-over").innerText = " Score : " + score;
@@ -88,7 +89,7 @@ function determinerTypeObstacle(numeroObstacle) {
                 typeObstacle = 0;
                 break;
             default:
-                afficherGameOver();
+                afficherResultatDuJeu("Congratulations");
                 break;
         }
     } else {
