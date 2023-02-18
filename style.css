@@ -145,18 +145,15 @@ h1
 }
 
 /*------------- PAGE OPTION -------------*/
-section{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 
 .box
 {
     display: flex;  
     justify-content: center;
-    gap : 30px;
+    gap : 70px;
 }
+
+
 
 .container
 {
@@ -174,6 +171,7 @@ section{
 {
     position: absolute;
     top: 50%;
+    z-index: 1;
     right: 30px;
     display: block;
     width: 18px;
@@ -188,6 +186,7 @@ section{
 {
     position: absolute;
     top: 50%;
+    z-index: 1;
     left: 30px;
     display: block;
     width: 18px;
@@ -220,9 +219,8 @@ section{
  flex-direction: column;
  justify-content: center; 
  width: 585px;
- height: 600px;
- border: black solid 1px; 
- 
+ height: 600px; 
+ border: #000000 solid 1px;
 }
 
 .difficulte p
@@ -242,19 +240,14 @@ section{
     
 }
 
-/*.difficulte input
-{
-    margin-bottom: 25px;
-}*/
-
 .touche input
 {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .touche
 {
- 
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -715,7 +708,7 @@ section{
     width: 100%;
 }
 
-/* Animation Obstacles*/
+/* Animation Obstacles
 @keyframes anime-obstacles {
     0%{
         left: 1400px;
@@ -724,9 +717,9 @@ section{
         left: -40px;
     }
 
-} 
+}
 
-/*Animation obstacles 2*/
+Animation obstacles 2
 @keyframes anime-obstacles2 {
     0% {
         left: 1400px;
@@ -735,4 +728,26 @@ section{
         left: -40px;
     }
     
+} */
+
+/* Animation Obstacles */
+@keyframes anime-obstacles {
+    0%{
+        left: 2050px;
+    }
+    100% {
+        left: -40px;
+    }
+
+} 
+
+/* Animation obstacles 2 */
+@keyframes anime-obstacles2 {
+    0% {
+        left: 2050px;
+    }
+    100% {
+        left: -40px;
+    }
+
 }

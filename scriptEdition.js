@@ -1,3 +1,4 @@
+alert("Lorsque vous avez fini de créer votre map, téléchargez la et importez la avec choisir le fichier pour l'appliquer à votre jeu")
 //Définition de la map tabSave (contient les clé, valeur des obstacles)
 var tabSave = new Map();
 //Définition de la variable obstacle (permet de savoir a quel obstacle nous en somme)

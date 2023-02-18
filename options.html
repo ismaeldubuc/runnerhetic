@@ -6,6 +6,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>RUNNER - OPTIONS</title>
 </head>
+<style>
+    body{
+        background: rgba(255, 255, 255, 0.15)url("images/map_prairie.png");
+        background-size: 1440px 1000px;
+        background-blend-mode: color;  
+    }
+</style>
 <body>
 	<form>
         <nav>
@@ -17,32 +24,34 @@
             <div class="box">
             
                 <div class="difficulte">
-                    <p class="choix-option">Difficultés</p> <br>
-                    <p class="choix-option">Sauter</p> <br>
-                    <p class="choix-option">S'accroupir</p> <br>
+
+                   <p class="choix-option">Difficultés</p> <br>
+                   <p class="choix-option">Sauter</p> <br>
+                   <p class="choix-option">S'accroupir</p> <br>
+
                 </div>
 
                 <div class="touche">
+
                     <div class="container">
                         <span class="next" onclick="nextLevel()" ></span>
                         <span class="prev" onclick="previousLevel()"></span>
                         <div class="choix"></div>
+                    </div>
                     
-                        <div class="configTouche">
-                            <div id="toucheSaut" onclick="changeKeySaut()"> - </div> <br>
-                        
-                            <div id="toucheAccroupi" onclick="changeKeyAccroupi()" ondblclick="closeEvent()"> - </div> <br>
-                        </div>
-                </div>
-            
+                    <div class="configTouche">
+                        <div id="toucheSaut" onclick="changeKeySaut()"> - </div> <br>
+                    
+                        <div id="toucheAccroupi" onclick="changeKeyAccroupi()" ondblclick="closeEvent()"> - </div> <br>
+                    </div>
+                </div>            
             </div>
     </form>
-
     <script type="text/javascript">
 
         let choixLevel = 0 ;
         
-        let view = ["Découverte", "Normal", "Perfectionnement", "Expertise", "Maîtrise"];
+        let view = ["Découverte", "Normal", "Perfectionnement", "Expertise", "Maitrise"];
 
         document.querySelector(".choix").innerText = view[choixLevel]
        
@@ -65,6 +74,7 @@
         }        
         
         function changeKeySaut(){
+             
             var f = (e) =>{
             document.getElementById("toucheSaut").innerHTML = `<span>${e.key}</span>`;
             window.removeEventListener("keydown" , f);
@@ -83,6 +93,5 @@
         }
             
     </script>
-
 </body>
 </html>

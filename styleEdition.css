@@ -128,6 +128,25 @@
     box-shadow: inset 0px 1px 2px black;
     text-shadow: inset 0px 4px 4px black;   
 }
-
-
+#button-retour {
+    position: absolute;
+    width: 280px;
+    height: 50px;
+    background-color: #859ECE;
+    border: 2px solid #000000;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Irish Grover';
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+#button-retour:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
 
