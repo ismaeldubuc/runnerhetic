@@ -1,0 +1,738 @@
+body
+{
+    background: rgba(255, 255, 255, 0.15)url("images/map_prairie.png");
+    background-size: 1440px 1000px;
+    background-blend-mode: color;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    
+}
+
+/*------------- PAGE DECORATION LIEN -------------*/
+
+a
+{
+    text-decoration: none;
+}
+
+/*------------- PAGE TITRE -------------*/
+
+h1
+{
+    font-family: 'Inknut Antiqua';
+    margin-top: 0px;
+    font-size: 140px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 0.10px;
+    -webkit-text-stroke-color: black;   
+    line-height: 1.25em;
+}
+
+/*------------- BOUTON DE RETOUR -------------*/
+
+#button-retour
+{
+    position: absolute;
+    width: 280px;
+    height: 50px;
+    background-color: #859ECE;
+    border: 2px solid #000000;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/*------------- BOUTON DU MENU -------------*/
+
+.button-menu
+{
+    display: block;
+    width: 312px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }    
+
+.button-menu:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
+
+/*------------- PAGE NIVEAUX -------------*/
+
+.button-niveau
+{
+    display: block;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    font-size: 60px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;   
+}
+
+
+#button-niveau1
+{
+    background: rgba(0, 0, 0, 0.50) url("images/map_prairie.png");
+    background-size: 400px 150px;
+    background-blend-mode: darken;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+
+#button-niveau2
+{
+    background: rgba(0, 0, 0, 0.50) url("images/ville.jpeg");
+    background-size: 400px 150px;
+    background-blend-mode: darken;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+
+#button-niveau3
+{
+    background : rgba(0, 0, 0, 0.50) url("images/dersert.jpeg");
+    background-size: 400px 150px;
+    background-blend-mode: darken;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+}
+
+#button-niveau1:hover
+{
+    background: url("images/map_prairie.png");
+    background-size: 400px 150px;
+    
+}
+
+#button-niveau2:hover
+{
+    background: url("images/ville.jpeg");
+    background-size: 400px 150px;
+    
+}
+
+#button-niveau3:hover
+{
+    background: url("images/dersert.jpeg");
+    background-size: 400px 150px;
+    
+}
+
+/*------------- PAGE OPTION -------------*/
+section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.box
+{
+    display: flex;  
+    justify-content: center;
+    gap : 30px;
+}
+
+.container
+{
+    position: relative;
+    width: 90%;
+    height: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
+
+
+.container .next
+{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: translateY(-50%) rotate(135deg);
+    
+}
+
+.container .prev
+{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    transform: translateY(-50%) rotate(315deg);
+    
+}
+
+.choix
+{
+    position : relative;
+    width: 100%;
+    height: 100%;
+    line-height: 70px;
+    color: white;
+    text-align: center;   
+    font-family: 'Irish Grover';
+    font-size: 40px;
+    color: zwhite;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;   
+}
+
+.difficulte
+{
+ background: rgba(255, 255, 255, 0.3);  
+ display: flex;
+ flex-direction: column;
+ justify-content: center; 
+ width: 585px;
+ height: 600px;
+ border: black solid 1px; 
+ 
+}
+
+.difficulte p
+{
+    margin-bottom: 25px;
+    font-family: 'Irish Grover';
+    font-size: 40px;
+    color: white;
+    background-color: #D9D9D9;
+    border: #000000 solid 1px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;   
+    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/*.difficulte input
+{
+    margin-bottom: 25px;
+}*/
+
+.touche input
+{
+    margin-bottom: 25px;
+}
+
+.touche
+{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 585px;
+    height: 600px;
+    border: black solid 1px;
+    background: rgba(255, 255, 255, 0.3);    
+    
+}
+
+
+/*----------------- PAGE PARTIE ------------------*/
+
+.head
+{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#score
+{
+    font-family: 'Yeon Sung';
+    font-size: 35px;
+    color: white;
+    margin-left: 20px;
+}
+
+#niveau{
+    font-family: 'Yeon Sung';
+    font-size: 35px;
+    color: white;
+    margin-right: 20px;
+}
+
+#button-pause
+{
+    display: inline;
+    font-family: 'Yeon Sung';
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    background: transparent;
+    width: 90px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#titrePause
+{
+    font-family: 'Irish Grover';
+    margin-top: 90px;
+    font-size: 140px;
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;   
+    line-height: 1.25em;
+}
+
+#button-reprendre
+{
+    display: none;
+    width: 312px;
+    height: 70px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#button-reprendre:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
+
+#button-quitter
+{
+    display: none;
+    width: 312px;
+    height: 70px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#button-quitter:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
+
+
+#score-pause
+{
+    font-family: 'Irish Grover';
+    margin-top: 90px;
+    font-size: 75px;
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;   
+    line-height: 1.25em;
+}
+
+/* ----------------- PAGE PAUSE ------------------- */
+
+#button-reprendre
+{
+    display: none;
+    width: 312px;
+    height: 70px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#button-reprendre:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
+
+#button-quitter
+{
+    display: none;
+    width: 312px;
+    height: 70px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#button-quitter:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
+
+
+#button-recommencer 
+{
+    display: none;
+    width: 312px;
+    height: 70px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#button-recommencer:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
+
+#titreOver
+{
+    font-family: 'Irish Grover';
+    margin-top: 90px;
+    font-size: 140px;
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;   
+    line-height: 1.25em;
+}
+
+#score-over
+{
+
+    font-family: 'Irish Grover';
+    margin-top: 90px;
+    font-size: 75px;
+    margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;   
+    line-height: 1.25em;
+
+}
+
+#button-quitter-over
+{
+    display: none;
+    width: 312px;
+    height: 70px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
+
+#button-quitter-over:hover
+{
+    box-shadow: inset 0px 1px 4px black;
+    text-shadow: inset 0px 4px 4px black;;
+}
+
+
+
+/* ----------------- PAGE EDITION ------------------- */
+
+.editionTitle
+{
+    font-family: 'Inknut Antiqua';
+    margin-top: 15px;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 0.10px;
+    -webkit-text-stroke-color: black;   
+    line-height: 1.25em;
+}
+
+.modeEdition
+{
+    position: relative;
+    border: 3px solid #D9D9D9;
+    width: 1800px;
+    height: 750px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.configTouche
+{
+    width: 100%;
+    height: 300px;
+}
+
+#toucheSaut
+{
+    display: block;
+    width: 312px;
+    height: 70px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#toucheAccroupi
+{
+    display: block;
+    width: 312px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    font-size: 40px;
+    font-family: 'Irish Grover';
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    color: white;   
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: black;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+#touche span{
+    top: 5px;
+}
+
+/* ----------------- SPRITES OBSTACLES ET ANIMATIONS ------------------- */
+
+#personnage{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    object-fit: cover;
+
+  
+}
+
+.animation{  
+    animation: perso-saut 600ms;
+}
+
+/* Obstacles */
+
+/*Animation du personnage qui saute*/
+@keyframes perso-saut {
+    0%{
+        bottom: 50px;
+    }
+    25%{
+        bottom: 200px;
+
+    }
+    50%{
+        bottom: 200px;
+    }
+    
+    100%{
+        bottom: 50px;
+    }
+}
+
+/* Animation accroupi*/
+#accroupi{
+    display: none;
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    bottom: 40px;
+    object-fit: cover;
+}
+
+/* Animation obstacles */
+#obstacles{
+    display: none;
+    width: 64px;
+    height: 64px;
+    background-color: #ededed00;
+    position : absolute;
+    bottom: 30px;
+    left: 1400px;
+    animation: anime-obstacles 2.5s linear infinite ;
+}
+
+/*Animation obstacle 2*/
+#obstacles2{
+    display: none;
+    width:128px;
+    height: 128px;
+    background-color: #ededed00;
+    position: absolute;
+    bottom: 70px;
+    left: 1400px;
+    animation : anime-obstacles2 3s linear infinite ;
+}
+
+/* Animation obstacles 3 */
+#obstacles3{
+    display: none;
+    width: 64px;
+    height: 64px;
+    background-color: #ededed00;
+    position : absolute;
+    bottom: 30px;
+    left: 1400px;
+    animation: anime-obstacles 2.5s linear infinite ;
+}
+
+/* Animation obstacles 4 */
+#obstacles4{
+    display: none;
+    width: 64px;
+    height: 64px;
+    background-color: #ededed00;
+    position : absolute;
+    bottom: 30px;
+    left: 1400px;
+    animation: anime-obstacles 2.5s linear infinite ;
+}
+
+/* Pour mettre l'oiseau à la bonne taille */
+
+#obstacles2 img {
+    height: 100%;
+    width: 100%;
+    transform: scaleX(-1);
+}
+
+#obstacles3 img{
+    height: 100%;
+    width: 100%;
+}
+
+#obstacles4 img{
+    height: 100%;
+    width: 100%;
+}
+
+/* Animation Obstacles*/
+@keyframes anime-obstacles {
+    0%{
+        left: 1400px;
+    }
+    100% {
+        left: -40px;
+    }
+
+} 
+
+/*Animation obstacles 2*/
+@keyframes anime-obstacles2 {
+    0% {
+        left: 1400px;
+    }
+    100% {
+        left: -40px;
+    }
+    
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>RUNNER - OPTIONS</title>
+</head>
+<body>
+	<form>
+        <nav>
+            <a href="index.html"><input class="button-menu" id="button-retour" type="button" value="RETOUR AU MENU"></a> <br>
+        </nav>
+
+        <h1>Options</h1>
+        
+            <div class="box">
+            
+                <div class="difficulte">
+                    <p class="choix-option">Difficultés</p> <br>
+                    <p class="choix-option">Sauter</p> <br>
+                    <p class="choix-option">S'accroupir</p> <br>
+                </div>
+
+                <div class="touche">
+                    <div class="container">
+                        <span class="next" onclick="nextLevel()" ></span>
+                        <span class="prev" onclick="previousLevel()"></span>
+                        <div class="choix"></div>
+                    
+                        <div class="configTouche">
+                            <div id="toucheSaut" onclick="changeKeySaut()"> - </div> <br>
+                        
+                            <div id="toucheAccroupi" onclick="changeKeyAccroupi()" ondblclick="closeEvent()"> - </div> <br>
+                        </div>
+                </div>
+            
+            </div>
+    </form>
+
+    <script type="text/javascript">
+
+        let choixLevel = 0 ;
+        
+        let view = ["Découverte", "Normal", "Perfectionnement", "Expertise", "Maîtrise"];
+
+        document.querySelector(".choix").innerText = view[choixLevel]
+       
+        function nextLevel(){
+            if(choixLevel >= view.length-1){
+                console.log("plus de niveau")
+            } else {
+                choixLevel += 1
+                document.querySelector(".choix").innerText = view[choixLevel]
+            }
+        }
+
+        function previousLevel(){
+            if(choixLevel == 0){
+                console.log("vous êtes au premier choix")
+            } else {
+                choixLevel -= 1
+                document.querySelector(".choix").innerText = view[choixLevel]
+            }
+        }        
+        
+        function changeKeySaut(){
+            var f = (e) =>{
+            document.getElementById("toucheSaut").innerHTML = `<span>${e.key}</span>`;
+            window.removeEventListener("keydown" , f);
+            };
+
+            window.addEventListener("keydown", f);
+        }
+
+        function changeKeyAccroupi(){
+            var a = (e) =>{
+            document.getElementById("toucheAccroupi").innerHTML = `<span>${e.key}</span>`;
+            window.removeEventListener("keydown" , a);
+            };
+
+            window.addEventListener("keydown", a);
+        }
+            
+    </script>
+
+</body>
+</html>
