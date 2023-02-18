@@ -41,6 +41,7 @@ function detectionCollision(){
         obstacleArray[typeObstacle].style.display = "none"; // on cache l'obstacle
         dejaPasseParLa = true;
         numeroObstacle++;
+        score = score + 10
         typeObstacle = determinerTypeObstacle(numeroObstacle); // on génère un nombre aléatoire
         obstacleArray[typeObstacle].style.display = "block"; // nouvel obstacle selon le nombre aléatoire
         //console.log("Obstacles Left:"+obstaclesLeft);
@@ -100,15 +101,15 @@ function determinerTypeObstacle(numeroObstacle) {
 }
 
 /* -------------- AFFICHE LE SCORE PENDANT LE JEU --------------- */
-let score = 0 ;
-var interval = setInterval(afficherScore, 100);
+var score = 0 ;
+var interval = setInterval(afficherScore);
 var obstaclesLeft = parseInt(window.getComputedStyle(obstacles).getPropertyValue("left"));
 let pause = false;
 
 document.querySelector("#niveau").innerText = "Niveau 1";
 
 function afficherScore(){
-    score++;
+    //score+=10;
     document.querySelector("#score").innerText = score;
     
     if(score == 1000){
