@@ -49,7 +49,58 @@ function detectionCollision(){
     } else if ((obstaclesLeft > 0) && (dejaPasseParLa==true)) {
         dejaPasseParLa = false;
     }
-    
+
+    /*---------------- Vitesse des obstacles ---------------------*/
+    if(score === 10){
+        document.getElementById("obstacles").style.animationDuration = "2.4s";
+        document.getElementById("obstacles2").style.animationDuration = "2.4s";
+        document.getElementById("obstacles3").style.animationDuration = "2.4s";
+        document.getElementById("obstacles4").style.animationDuration = "2.4s";
+    }
+    if(score === 20){
+        document.getElementById("obstacles").style.animationDuration = "2.3s";
+        document.getElementById("obstacles2").style.animationDuration = "2.3s";
+        document.getElementById("obstacles3").style.animationDuration = "2.3s";
+        document.getElementById("obstacles4").style.animationDuration = "2.3s";
+    }
+    if(score === 30){
+        document.getElementById("obstacles").style.animationDuration = "2.2s";
+        document.getElementById("obstacles2").style.animationDuration = "2.2s";
+        document.getElementById("obstacles3").style.animationDuration = "2.2s";
+        document.getElementById("obstacles4").style.animationDuration = "2.2s";
+    }
+    else if(score === 40){
+        document.getElementById("obstacles").style.animationDuration = "2.1s";
+        document.getElementById("obstacles2").style.animationDuration = "2.1s";
+        document.getElementById("obstacles3").style.animationDuration = "2.1s";
+        document.getElementById("obstacles4").style.animationDuration = "2.1s";
+    }
+    else if(score === 50){
+        document.getElementById("obstacles").style.animationDuration = "2s";
+        document.getElementById("obstacles2").style.animationDuration = "2s";
+        document.getElementById("obstacles3").style.animationDuration = "2s";
+        document.getElementById("obstacles4").style.animationDuration = "2s";
+    }
+    else if(score === 100){
+        document.getElementById("obstacles").style.animationDuration = "1.5s";
+        document.getElementById("obstacles2").style.animationDuration = "1.5s";
+        document.getElementById("obstacles3").style.animationDuration = "1.5s";
+        document.getElementById("obstacles4").style.animationDuration = "1.5s";
+    }
+    // la vitesse de l'obstacle passe à 1.7s
+    else if(score === 150){
+        document.getElementById("obstacles").style.animationDuration = "1s";
+        document.getElementById("obstacles2").style.animationDuration = "1s";
+        document.getElementById("obstacles3").style.animationDuration = "1s";
+        document.getElementById("obstacles4").style.animationDuration = "1s";
+}
+    else if(score === 200)
+{
+        document.getElementById("obstacles").style.animationDuration = "0.8s";
+        document.getElementById("obstacles2").style.animationDuration = "0.8s";
+        document.getElementById("obstacles3").style.animationDuration = "0.8s";
+        document.getElementById("obstacles4").style.animationDuration = "0.8s";
+}
     
 }
 function afficherResultatDuJeu(titre = "Game Over") {
