@@ -1,0 +1,133 @@
+/*------------- PAGE EDITION -------------*/
+
+
+
+.editionTitle
+{
+    font-family: 'Inknut Antiqua';
+    margin-top: 15px;
+    font-size: 65px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: 0.10px;
+    -webkit-text-stroke-color: black;   
+    line-height: 1.25em;
+}
+
+.fenetreEdition
+{
+    position: relative;
+    overflow-y: scroll;
+    border: 4px solid black;
+    width: 1370px;
+    height: 624px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.fenetreEdition::-webkit-scrollbar
+{
+    display: none;
+}
+
+.boutons
+{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1370px;
+    height: 136px;
+    margin-top: 20px;
+    
+}
+
+.telCharApp
+{
+    width: 637px;
+    height: 135px;
+}
+
+.telCharApp input:hover
+{
+    box-shadow: inset 0px 1px 2px black;
+    text-shadow: inset 0px 4px 4px black;   
+}
+
+.telCharApp input
+{
+    margin-bottom: 10px;
+    float: right;
+}
+
+.telCharApp #telecharger
+{
+    font-family: 'Irish Grover';
+    font-size: 33px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    margin-right: 10px;
+    background-color: #476FFF;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.telCharApp #charger
+{
+    font-family: 'Irish Grover';
+    font-size: 33px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: #476FFF;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.telCharApp #appliquer
+{
+    font-family: 'Irish Grover';
+    font-size: 33px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: #476FFF;
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.ajoutSupp #firstButton
+{
+    font-family: 'Irish Grover';
+    font-size: 33px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: #1DD919;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.ajoutSupp #supprimer
+{
+    font-family: 'Irish Grover';
+    font-size: 33px;
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: #EC0808;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.ajoutSupp input:hover
+{
+    box-shadow: inset 0px 1px 2px black;
+    text-shadow: inset 0px 4px 4px black;   
+}
+
+
+

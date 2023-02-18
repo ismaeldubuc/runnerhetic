@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styleEdition.css">
+	<title>RUNNER - EDITION</title>
+</head>
+<style>
+    body{
+        background: rgba(255, 255, 255, 0.15)url("images/fond-nuit.jpeg");
+        background-size: 1440px 1000px;
+        background-blend-mode: color;  
+    }
+</style>
+<body>
+    <nav>
+        <a href="index.html"><input class="button-menu" id="button-retour" type="button" value="RETOUR AU MENU"></a> <br>
+    </nav>
+        
+        <h1 class="editionTitle" >Mode Edition</h1>
+
+        <section class="fenetreEdition" id="secP">
+        </section>
+
+        <div class="boutons">
+            
+            <div class="ajoutSupp">
+                <input id="firstButton" type="button" value="Ajouter" onclick="edition()">
+                <input id="supprimer" type="button" value="Supprimer" onclick="lessObstacle()">
+            </div>
+
+            <div class="telCharApp">
+                <input type="file" id="charger" value="Charger" onchange="importFile(this.files[0])">
+                <input id="telecharger" type="button" value="Telecharger" onclick="createDownloadableFile()"><br>
+                <!-- <input id="appliquer" type="button" value="Appliquer" onclick="plusPlus()"> -->
+            </div>
+
+        </div>
+        <script src="scriptEdition.js"></script>
+</body>
+</html>
