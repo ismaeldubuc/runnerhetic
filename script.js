@@ -1,6 +1,4 @@
-alert("Appuyez sur a pour sauter et sur q pour vous accroupir, vous ne pouvez pas sauter par dessus les oiseaux")
 var perso = document.querySelector("#personnage");
-
 var obstacles = document.querySelector("#obstacles");
 var obstacles2 = document.querySelector("#obstacles2");
 var obstacles3 = document.querySelector("#obstacles3");
@@ -258,34 +256,77 @@ function sauter(){
 
 //fonction pour déterminer la key à presser
 document.addEventListener("keydown",function(e){
-    if(e.key == 'a'){
-        sauter()
+    if (keyUp === null) {
+        if(e.key == 'a'){
+            sauter()
+        }
+    } else {
+        if(e.key == keyUp){
+            sauter()
+        }
     }
 });
 
 //afficher le perso accroupi et fait disparaitre le luffy normal
 
 document.addEventListener("keydown",function(e){
-    if(e.key=='q'){
-        perso.style.bottom = "40px"
-        accroupi.style.display = "unset"
-        //console.log ("persoBottom")
-        console.log(parseInt(window.getComputedStyle(perso).getPropertyValue("bottom")))
-        perso.style.display = "none"
+    if (keySneak === null) {
+        if(e.key == 'q'){
+            perso.style.bottom = "40px"
+            accroupi.style.display = "unset"
+            //console.log ("persoBottom")
+            console.log(parseInt(window.getComputedStyle(perso).getPropertyValue("bottom")))
+            perso.style.display = "none"
+        }
+    } else {
+        if(e.key === keySneak){
+            perso.style.bottom = "40px"
+            accroupi.style.display = "unset"
+            //console.log ("persoBottom")
+            console.log(parseInt(window.getComputedStyle(perso).getPropertyValue("bottom")))
+            perso.style.display = "none"
+        }
     }
 });
 
 //afficher le perso normal et disparaitre luffy accroupi
 document.addEventListener("keyup",function(e){
-    if(e.key=='q'){
-        perso.style.bottom = "50px"
-        accroupi.style.display = "none"
-        //console.log ("persoBottom")
-        perso.style.display = "unset"
+    if (keySneak === null) {
+        if(e.key=='q'){
+            perso.style.bottom = "50px"
+            accroupi.style.display = "none"
+            //console.log ("persoBottom")
+            perso.style.display = "unset"
+        }
+    } else {
+        if(e.key === keySneak){
+                perso.style.bottom = "50px"
+                accroupi.style.display = "none"
+                //console.log ("persoBottom")
+                perso.style.display = "unset"
+        }
     }
 });
 
 var listeDesObstaclesEnJson = sessionStorage.getItem('listeDesObstacles');
 listeDesObstacles = JSON.parse(listeDesObstaclesEnJson);
 console.log(listeDesObstacles);
+
+var keyUp = sessionStorage.getItem('keyUp')
+console.log("Touche pour sauter : ", keyUp)
+var keySneak = sessionStorage.getItem('keyDown')
+console.log("Touche pour accroupir : ", keySneak)
+if ((keyUp === null) && (keySneak === null)){
+    alert("N'oubliez pas configurez vos touches à la page option ! (Par défaut a : sauter q : s'accroupir)")
+} else {
+    var toucheSaut = keyUp
+    var toucheBas = keySneak
+    if (keyUp === ' ') {
+        toucheSaut="Espace"
+    } 
+    if (keySneak === ' ') {
+        toucheBas="Espace"
+    } 
+    alert("Sauter : "+ toucheSaut +" / S'accroupir : "+ toucheBas)
+}
 obstacleHandler();

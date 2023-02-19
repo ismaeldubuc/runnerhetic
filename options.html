@@ -71,24 +71,29 @@
                 choixLevel -= 1
                 document.querySelector(".choix").innerText = view[choixLevel]
             }
-        }        
-        
+        }     
+        var keyUp = "a";   
         function changeKeySaut(){
-             
             var f = (e) =>{
             document.getElementById("toucheSaut").innerHTML = `<span>${e.key}</span>`;
             window.removeEventListener("keydown" , f);
+            console.log("touche up :", e.key)
+            keyUp = e.key
+            console.log("deuxieme log up :",keyUp)
+            sessionStorage.setItem('keyUp', keyUp);
             };
-
             window.addEventListener("keydown", f);
         }
-
+        var keyDown = "q";
         function changeKeyAccroupi(){
             var a = (e) =>{
             document.getElementById("toucheAccroupi").innerHTML = `<span>${e.key}</span>`;
             window.removeEventListener("keydown" , a);
+            console.log("touche down :", e.key)
+            keyDown = e.key
+            console.log("deuxieme log sneak :",keyDown)
+            sessionStorage.setItem('keyDown', keyDown);
             };
-
             window.addEventListener("keydown", a);
         }
             
