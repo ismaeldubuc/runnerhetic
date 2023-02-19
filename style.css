@@ -47,7 +47,11 @@ h1
 
 
 /*------------- BOUTON DU MENU -------------*/
-
+h1{
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Irish Grover';
+}
 .button-menu
 {
     display: block;

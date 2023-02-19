@@ -92,18 +92,23 @@ function detectionCollision(){
         document.getElementById("obstacles3").style.animationDuration = "1s";
         document.getElementById("obstacles4").style.animationDuration = "1s";
 }
-    else if(score === 200)
-{
+    else if(score === 200){
         document.getElementById("obstacles").style.animationDuration = "0.8s";
         document.getElementById("obstacles2").style.animationDuration = "0.8s";
         document.getElementById("obstacles3").style.animationDuration = "0.8s";
         document.getElementById("obstacles4").style.animationDuration = "0.8s";
 }
+    else if(score === 250)
+{
+        document.getElementById("obstacles").style.animationDuration = "0.5s";
+        document.getElementById("obstacles2").style.animationDuration = "0.5s";
+        document.getElementById("obstacles3").style.animationDuration = "0.5s";
+        document.getElementById("obstacles4").style.animationDuration = "0.5s";
+}
     
 }
 function afficherResultatDuJeu(titre = "Game Over") {
     var titleOver = titre;
-
     document.querySelector("#titreOver").innerText = titleOver;   
     document.querySelector("#score-over").innerText = " Score : " + score;
     obstacleArray[typeObstacle].style.animation = "none";
@@ -162,7 +167,7 @@ function afficherScore(){
     document.querySelector("#score").innerText = score;
     
     if(score == 1000){
-    document.querySelector("#niveau").innerText = "Niveau 2";
+    document.querySelector("#niveau").innerText = "Niveau HARDCORE";
     
      }
 }
